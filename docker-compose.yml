@@ -1,0 +1,12 @@
+version: '3'
+services:
+    game-provider:
+        container_name: game-provider
+        build: .
+        ports:
+        - "8080:8080"
+    web:
+        image: "gogrumpy-ui_web"
+        container_name: gogrumpy-ui
+        ports:
+        - "5000:5000"
