@@ -13,7 +13,7 @@ func main() {
 	e.Use(middleware.Recover())
 	e.Use(middleware.Logger())
 
-	games := e.Group("games/")
+	games := e.Group("api/v0/games/")
 	e.GET("alive", isAlive)
 	apiV0.Register(games)
 
